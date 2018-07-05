@@ -19,5 +19,9 @@ inoremap <C-p> :FZF<Enter>
 
 nnoremap F :NERDTree<Enter>
 
+nnoremap <tab> :tabn<Enter> 
+inoremap <tab> :tabn<Enter> 
 
+nnoremap <C-t> :tabnew<Enter> 
+inoremap <C-t> :tabnew<Enter> 
 
