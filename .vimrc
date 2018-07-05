@@ -14,14 +14,28 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+"enabling mouse support 
+:set mouse=a
+
+"fuzy search
 nnoremap <C-p> :FZF<Enter> 
 inoremap <C-p> :FZF<Enter> 
 
+"File explorer
 nnoremap F :NERDTree<Enter>
 
+"tab moving/managing shortcuts
 nnoremap <tab> :tabn<Enter> 
 inoremap <tab> :tabn<Enter> 
-
 nnoremap <C-t> :tabnew<Enter> 
 inoremap <C-t> :tabnew<Enter> 
+
+"disable ex mode
+:map Q <Nop> 
+
+"traditional copy/paste key bindings  
+vnoremap <C-c> y 
+:map <C-v> p 
+
+
 
