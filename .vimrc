@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
+Plug 'junegunn/fzf.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -37,5 +37,8 @@ inoremap <C-t> :tabnew<Enter>
 vnoremap <C-c> y 
 :map <C-v> p 
 
+"fuzzy search of ctags
+nnoremap <C-c> :Tags<Enter> 
+inoremap <C-c> :Tags<Enter> 
 
 
