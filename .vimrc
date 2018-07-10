@@ -34,11 +34,10 @@ inoremap <C-t> :tabnew<Enter>
 :map Q <Nop> 
 
 "traditional copy/paste key bindings  
-vnoremap <C-c> y 
-:map <C-v> p 
+vnoremap <C-c> "*y :let @+=@*<CR> 
+:map <C-v> "+P
 
 "fuzzy search of ctags
 nnoremap <C-c> :Tags<Enter> 
 inoremap <C-c> :Tags<Enter> 
-
 
