@@ -41,3 +41,6 @@ vnoremap <C-c> "*y :let @+=@*<CR>
 nnoremap <C-c> :Tags<Enter> 
 inoremap <C-c> :Tags<Enter> 
 
+"Backspace as a delete in visualmode
+vnoremap <BS> d
+
