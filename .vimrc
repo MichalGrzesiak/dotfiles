@@ -17,6 +17,9 @@ call plug#end()
 "enabling mouse support 
 :set mouse=a
 
+"seting utf=8 encoding for NERDtree to work properly
+:set encoding=utf-8 
+
 "fuzy search
 nnoremap <C-p> :FZF<Enter> 
 inoremap <C-p> :FZF<Enter> 
@@ -26,7 +29,6 @@ nnoremap F :NERDTree<Enter>
 
 "tab moving/managing shortcuts
 nnoremap <tab> :tabn<Enter> 
-inoremap <tab> :tabn<Enter> 
 nnoremap <C-t> :tabnew<Enter> 
 inoremap <C-t> :tabnew<Enter> 
 
