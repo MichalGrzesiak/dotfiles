@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'majutsushi/tagbar'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -45,4 +46,7 @@ inoremap <C-c> :Tags<Enter>
 
 "Backspace as a delete in visualmode
 vnoremap <BS> d
+
+"Tagbar
+nmap <F8> :TagbarToggle<Enter>
 
