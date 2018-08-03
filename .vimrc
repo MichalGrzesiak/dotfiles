@@ -12,6 +12,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
+Plug 'lvht/tagbar-markdown' "php have to be in the $PATH
+Plug 'junegunn/goyo.vim'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -49,4 +52,9 @@ vnoremap <BS> d
 
 "Tagbar
 nmap <F8> :TagbarToggle<Enter>
+
+"Enabling/disabling distraction-free writing 
+nmap <F9> :Goyo<Enter>
+nmap <F10> :Goyo!<Enter>
+
 
