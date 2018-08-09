@@ -15,16 +15,17 @@ Plug 'majutsushi/tagbar'
 Plug 'lvht/tagbar-markdown' "php have to be in the $PATH
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
+Plug 'w0rp/ale' "linting engine - works for many languages and it's based on third-party linting tools like clang, clang-format or autopep8
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 "enabling mouse support 
 :set mouse=a
 
-"seting utf=8 encoding for NERDtree to work properly
+"setting utf=8 encoding for NERDtree to work properly
 :set encoding=utf-8 
 
-"fuzy search
+"fuzzy search
 nnoremap <C-p> :FZF<Enter> 
 inoremap <C-p> :FZF<Enter> 
 
