@@ -14,7 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'lvht/tagbar-markdown' "php have to be in the $PATH
 Plug 'junegunn/goyo.vim'
-
+Plug 'tpope/vim-commentary'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -50,11 +50,12 @@ inoremap <C-c> :Tags<Enter>
 "Backspace as a delete in visualmode
 vnoremap <BS> d
 
+"English spell check
+map <F7> :setlocal spell! spelllang=en_us<CR>
+
 "Tagbar
 nmap <F8> :TagbarToggle<Enter>
 
-"Enabling/disabling distraction-free writing 
+"Enabling/disabling distraction-free writing mode
 nmap <F9> :Goyo<Enter>
-nmap <F10> :Goyo!<Enter>
-
 
