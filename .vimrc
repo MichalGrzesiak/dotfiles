@@ -25,6 +25,15 @@ call plug#end()
 "setting utf=8 encoding for NERDtree to work properly
 :set encoding=utf-8 
 
+"ignore case when searching
+set ignorecase
+
+"use incremental search
+set incsearch 
+
+"set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
 "fuzzy search
 nnoremap <C-p> :FZF<Enter> 
 inoremap <C-p> :FZF<Enter> 
