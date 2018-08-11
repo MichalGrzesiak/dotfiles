@@ -34,6 +34,9 @@ set incsearch
 "set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
+"no swap files
+set noswapfile
+
 "fuzzy search
 nnoremap <C-p> :FZF<Enter> 
 inoremap <C-p> :FZF<Enter> 
@@ -69,3 +72,5 @@ nmap <F8> :TagbarToggle<Enter>
 "Enabling/disabling distraction-free writing mode
 nmap <F9> :Goyo<Enter>
 
+"Enabling/disabling line numbers
+nmap <F10> :set invnumber<Enter>
