@@ -16,6 +16,7 @@ Plug 'lvht/tagbar-markdown' "php have to be in the $PATH
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale' "linting engine - works for many languages and it's based on third-party linting tools like clang, clang-format or autopep8
+Plug 'mhinz/vim-startify'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
