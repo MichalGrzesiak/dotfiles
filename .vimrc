@@ -17,6 +17,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale' "linting engine - works for many languages and it's based on third-party linting tools like clang, clang-format or autopep8
 Plug 'mhinz/vim-startify'
+Plug 'simnalamburt/vim-mundo'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -37,6 +38,9 @@ set so=7
 
 "no swap files
 set noswapfile
+
+"Enable persistent undo so that undo history persists across vim sessions
+set undofile
 
 "fuzzy search
 nnoremap <C-p> :FZF<Enter> 
@@ -75,3 +79,6 @@ nmap <F9> :Goyo<Enter>
 
 "Enabling/disabling line numbers
 nmap <F10> :set invnumber<Enter>
+
+"Toggling mundo plugin to visualize the Vim undo tree.
+nmap <F12> :MundoToggle<Enter>
