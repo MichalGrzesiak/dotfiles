@@ -20,6 +20,7 @@ Plug 'mhinz/vim-startify'
 Plug 'simnalamburt/vim-mundo'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'farmergreg/vim-lastplace'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
