@@ -21,8 +21,29 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'farmergreg/vim-lastplace'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'tomasiser/vim-code-dark' "
+Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+" code dark colorscheme for C/C++
+autocmd BufEnter *.cpp colorscheme codedark 
+autocmd BufEnter *.c colorscheme codedark 
+autocmd BufEnter *.hpp. colorscheme codedark 
+autocmd BufEnter *.h. colorscheme codedark 
+
+" dark gruvbox colorscheme for Python, Java and HTML
+autocmd BufEnter *.py set background=dark | colorscheme gruvbox
+autocmd BufEnter *.java set background=dark | colorscheme gruvbox
+autocmd BufEnter *.html set background=dark | colorscheme gruvbox
+
+" dark papercolor colorscheme for Markdown and TeX
+autocmd BufEnter *.md set background=dark | colorscheme PaperColor
+autocmd BufEnter *.tex set background=dark | colorscheme PaperColor
+
 
 "enabling mouse support 
 :set mouse=a
