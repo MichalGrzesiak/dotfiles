@@ -28,6 +28,7 @@ Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'rhysd/vim-clang-format' " requires to have clang-format installed and have .clang-format file defined
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -69,6 +70,12 @@ set undofile
 
 "Display command line’s tab complete options as a menu.
 set wildmenu
+
+"Puts new vsplit windows to the right of the current
+set splitright
+
+"Puts new split windows to the bottom of the current
+set splitbelow  
 
 "disable default text folding for markdown 
 let g:vim_markdown_folding_disabled = 1
