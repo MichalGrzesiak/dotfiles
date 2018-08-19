@@ -25,7 +25,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tomasiser/vim-code-dark' "
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
-
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -43,7 +44,6 @@ autocmd BufEnter *.html set background=dark | colorscheme gruvbox
 " dark papercolor colorscheme for Markdown and TeX
 autocmd BufEnter *.md set background=dark | colorscheme PaperColor
 autocmd BufEnter *.tex set background=dark | colorscheme PaperColor
-
 
 "enabling mouse support 
 :set mouse=a
@@ -65,6 +65,12 @@ set noswapfile
 
 "Enable persistent undo so that undo history persists across vim sessions
 set undofile
+
+"Display command line’s tab complete options as a menu.
+set wildmenu
+
+"disable default text folding for markdown 
+let g:vim_markdown_folding_disabled = 1
 
 "fuzzy search
 nnoremap <C-p> :FZF<Enter> 
