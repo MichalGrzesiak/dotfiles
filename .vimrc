@@ -34,6 +34,16 @@ Plug 'jistr/vim-nerdtree-tabs' "no longer actively maintained
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+"Create YCM config file if there isn't one yet and CMakeLists.txt exist
+:function! RunYCMGeneratorForCmakeProject()
+:if !empty(glob("./CMakeLists.txt"))
+:	if empty(glob("./.ycm_extra_conf.py"))
+:   		YcmGenerateConfig
+:	endif
+:endif
+:endfunction
+autocmd BufEnter * call RunYCMGeneratorForCmakeProject()
+
 " code dark colorscheme for C/C++
 autocmd BufEnter *.cpp colorscheme codedark 
 autocmd BufEnter *.c colorscheme codedark 
