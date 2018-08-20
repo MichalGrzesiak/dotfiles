@@ -30,7 +30,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/vim-clang-format' " requires to have clang-format installed and have .clang-format file defined
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs' "no longer supported 
+Plug 'jistr/vim-nerdtree-tabs' "no longer actively maintained
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -102,7 +102,7 @@ vnoremap <C-c> "*y :let @+=@*<CR>
 :map <C-v> "+P
 
 "pasting in insert mode with jump to the end of pasted text 
-imap <C-v> <Esc>"+P']A
+imap <C-v> <Esc>"+p']A
 
 "fuzzy search of ctags
 nnoremap <C-c> :Tags<Enter> 
