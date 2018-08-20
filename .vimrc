@@ -29,6 +29,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/vim-clang-format' " requires to have clang-format installed and have .clang-format file defined
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -85,7 +87,7 @@ nnoremap <C-p> :FZF<Enter>
 inoremap <C-p> :FZF<Enter> 
 
 "File explorer
-nnoremap F :NERDTree<Enter>
+nnoremap F :NERDTreeTabsToggle<Enter>
 
 "tab moving/managing shortcuts
 nnoremap <tab> :tabn<Enter> 
