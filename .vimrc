@@ -31,8 +31,10 @@ Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/vim-clang-format' " requires to have clang-format installed and have .clang-format file defined
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs' "no longer actively maintained
+Plug 'machakann/vim-highlightedyank' "make the yanked region highlighted
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
 
 "Create YCM config file if there isn't one yet and CMakeLists.txt exist
 :function! RunYCMGeneratorForCmakeProject()
@@ -91,6 +93,15 @@ set splitbelow
 
 "disable default text folding for markdown 
 let g:vim_markdown_folding_disabled = 1
+
+"Needed for older version of Vim (lower than version 8.0.1394) for highlighted
+"yank to work
+if !exists('##TextYankPost')
+	  map y <Plug>(highlightedyank)
+ endif
+
+"highlight after yank set to 200 milliseconds
+let g:highlightedyank_highlight_duration = 200
 
 "fuzzy search
 nnoremap <C-p> :FZF<Enter> 
