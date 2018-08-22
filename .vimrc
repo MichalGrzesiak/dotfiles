@@ -32,6 +32,7 @@ Plug 'rhysd/vim-clang-format' " requires to have clang-format installed and have
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs' "no longer actively maintained
 Plug 'machakann/vim-highlightedyank' "make the yanked region highlighted
+Plug 'haya14busa/vim-edgemotion'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -131,6 +132,12 @@ inoremap <C-c> :Tags<Enter>
 
 "Backspace as a delete in visualmode
 vnoremap <BS> d
+
+"Capital J as motion like j but stops at edge only
+map J <Plug>(edgemotion-j)
+
+"Capital K as motion like k but stops at edge only
+map K <Plug>(edgemotion-k)
 
 "Ctrl-a to expand snippet 
 let g:UltiSnipsExpandTrigger="<c-a>"
