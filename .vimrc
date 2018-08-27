@@ -50,8 +50,8 @@ autocmd BufEnter * call RunYCMGeneratorForCmakeProject()
 " code dark colorscheme for C/C++
 autocmd BufEnter *.cpp colorscheme codedark 
 autocmd BufEnter *.c colorscheme codedark 
-autocmd BufEnter *.hpp. colorscheme codedark 
-autocmd BufEnter *.h. colorscheme codedark 
+autocmd BufEnter *.hpp colorscheme codedark 
+autocmd BufEnter *.h colorscheme codedark 
 
 " dark gruvbox colorscheme for Python, Java and HTML
 autocmd BufEnter *.py set background=dark | colorscheme gruvbox
