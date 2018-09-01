@@ -148,6 +148,9 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "Ctrl-z to jump back to previous snippet tag
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+"Enables auto closing of the preview window after acceptance of offered completion string.
+let g:ycm_autoclose_preview_window_after_completion=1
+
 "English spell check
 map <F7> :setlocal spell! spelllang=en_us<CR>
 
