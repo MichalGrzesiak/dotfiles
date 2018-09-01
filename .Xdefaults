@@ -43,6 +43,8 @@ URxvt.matcher.button:	1
 URxvt.resize-font.smaller:	C-Down
 URxvt.resize-font.bigger:	C-Up
 
+urxvt*termName: screen-256color
+
 URxvt.colorUL:		#4682B4
 rofi.color-enabled:	true
 rofi.color-window:	#000, #000, #000
