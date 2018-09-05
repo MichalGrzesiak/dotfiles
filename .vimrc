@@ -62,6 +62,9 @@ autocmd BufEnter *.html set background=dark | colorscheme gruvbox
 autocmd BufEnter *.md set background=dark | colorscheme PaperColor
 autocmd BufEnter *.tex set background=dark | colorscheme PaperColor
 
+"set '#' as a deafult comment for cmake files
+autocmd FileType cmake setlocal commentstring=#\ %s
+
 "enabling mouse support 
 :set mouse=a
 
