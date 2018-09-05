@@ -33,6 +33,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs' "no longer actively maintained
 Plug 'machakann/vim-highlightedyank' "make the yanked region highlighted
 Plug 'haya14busa/vim-edgemotion'
+Plug 'simeji/winresizer' "ctrl+e for windows resize mode
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
