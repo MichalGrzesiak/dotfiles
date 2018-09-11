@@ -34,6 +34,7 @@ Plug 'jistr/vim-nerdtree-tabs' "no longer actively maintained
 Plug 'machakann/vim-highlightedyank' "make the yanked region highlighted
 Plug 'haya14busa/vim-edgemotion'
 Plug 'simeji/winresizer' "ctrl+e for windows resize mode
+Plug 'airblade/vim-gitgutter' "shows which lines have been added, modified, or removed in sign column
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -95,6 +96,12 @@ set splitright
 
 "Puts new split windows to the bottom of the current
 set splitbelow  
+
+"update time set to 100 (default 4000 = 4 sec) for gitguter to by more snappy 
+set updatetime=100
+
+"gitguter disable by default 
+let g:gitgutter_enabled = 0 
 
 "disable default text folding for markdown 
 let g:vim_markdown_folding_disabled = 1
@@ -164,8 +171,8 @@ nmap <F8> :TagbarToggle<Enter>
 "Enabling/disabling distraction-free writing mode
 nmap <F9> :Goyo<Enter>
 
-"Enabling/disabling line numbers
-nmap <F10> :set invnumber<Enter>
+"Enabling/disabling line numbers and gitguter diff lines
+nmap <F10> :set invnumber<Enter>:GitGutterToggle<Enter>
 
 "Toggling mundo plugin to visualize the Vim undo tree.
 nmap <F12> :MundoToggle<Enter>
