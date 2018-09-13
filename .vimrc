@@ -35,6 +35,7 @@ Plug 'machakann/vim-highlightedyank' "make the yanked region highlighted
 Plug 'haya14busa/vim-edgemotion'
 Plug 'simeji/winresizer' "ctrl+e for windows resize mode
 Plug 'airblade/vim-gitgutter' "shows which lines have been added, modified, or removed in sign column
+Plug 'wincent/terminus'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
