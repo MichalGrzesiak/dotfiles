@@ -70,6 +70,9 @@ autocmd BufEnter *.tex set background=dark | colorscheme PaperColor
 "set '#' as a deafult comment for cmake files
 autocmd FileType cmake setlocal commentstring=#\ %s
 
+"Show diff when editing git commit messages
+au FileType gitcommit DiffGitCached
+
 "enabling mouse support 
 :set mouse=a
 
