@@ -168,6 +168,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "Enables auto closing of the preview window after acceptance of offered completion string.
 let g:ycm_autoclose_preview_window_after_completion=1
 
+"Go to definition or declaration provided by YCM completer 
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 "English spell check
 map <F7> :setlocal spell! spelllang=en_us<CR>
 
