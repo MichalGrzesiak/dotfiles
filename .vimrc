@@ -37,6 +37,7 @@ Plug 'simeji/winresizer' "ctrl+e for windows resize mode
 Plug 'airblade/vim-gitgutter' "shows which lines have been added, modified, or removed in sign column
 Plug 'wincent/terminus'
 Plug 'ervandew/matchem' "auto adds closing quotes, parens, brackets, curlies 
+Plug 'kergoth/vim-bitbake', {'for': 'bitbake'} "Syntax highlightinf for bitbake tool(bb,bblasses and inc files)
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
