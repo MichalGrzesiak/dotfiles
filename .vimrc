@@ -106,6 +106,12 @@ set splitbelow
 "update time set to 100 (default 4000 = 4 sec) for gitguter to by more snappy 
 set updatetime=100
 
+"A file that matches with one of these patterns is ignored when expanding wildcards, completing file or directory names
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class
+
+"let nerd tree use wildignore as a list of file extensions to ignore
+let NERDTreeRespectWildIgnore=1
+
 "gitguter disable by default 
 let g:gitgutter_enabled = 0 
 
