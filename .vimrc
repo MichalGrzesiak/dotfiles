@@ -38,6 +38,7 @@ Plug 'airblade/vim-gitgutter' "shows which lines have been added, modified, or r
 Plug 'wincent/terminus'
 Plug 'ervandew/matchem' "auto adds closing quotes, parens, brackets, curlies 
 Plug 'kergoth/vim-bitbake', {'for': 'bitbake'} "Syntax highlightinf for bitbake tool(bb,bblasses and inc files)
+Plug 'azadkuh/vim-cmus' "plugin for cmus integration inside vim 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -127,9 +128,12 @@ if !exists('##TextYankPost')
 "highlight after yank set to 200 milliseconds
 let g:highlightedyank_highlight_duration = 200
 
-"fuzzy search
+"fuzzy search of files in workspace in normal and insert mode
 nnoremap <C-p> :FZF<Enter> 
 inoremap <C-p> :FZF<Enter> 
+
+"semicolon as a fuzzy search of vim commands in normal mode
+nnoremap ; :Commands<Enter>
 
 "File explorer
 nnoremap F :NERDTreeTabsToggle<Enter>
