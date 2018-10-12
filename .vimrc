@@ -39,6 +39,7 @@ Plug 'wincent/terminus'
 Plug 'ervandew/matchem' "auto adds closing quotes, parens, brackets, curlies 
 Plug 'kergoth/vim-bitbake', {'for': 'bitbake'} "Syntax highlightinf for bitbake tool(bb,bblasses and inc files)
 Plug 'azadkuh/vim-cmus' "plugin for cmus integration inside vim 
+Plug 'zivyangll/git-blame.vim' "shows git blame information in the status bar for the currently selected line (default binding is <Leader>s)
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
