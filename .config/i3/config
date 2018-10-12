@@ -216,3 +216,6 @@ bindsym Mod4+r exec start-pulseaudio-x11
 #move to left / right monitor
 bindsym $mod+Shift+n move workspace to output left
 bindsym $mod+Shift+m move workspace to output right
+
+#swap workspaces 
+bindsym $mod+Shift+s exec ~/.scripts/i3_swap_workspaces.sh
