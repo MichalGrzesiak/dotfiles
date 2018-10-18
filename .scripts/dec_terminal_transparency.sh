@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-#sets random wallpaper from ~/.wallpapers directory using wal
+#Script decreases termianl transparency
 
 file="./.transparency_level"
-array=($(ls ~/.wallpapers))
-
 if [ -f "$file" ]
 then
 	transparency_level=$(head -n 1 $file)
@@ -12,6 +10,10 @@ else
 	transparency_level=100
 fi
 
-wal -i  ~/.wallpapers/${array[$(($RANDOM%${#array[@]}))]} -a $transparency_level
+if [ $transparency_level -lt 100 ]; then
+	transparency_level=$((transparency_level+=10))
+fi
+
+wal -R -a $transparency_level
 
 echo $transparency_level >.transparency_level
