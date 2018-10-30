@@ -40,6 +40,8 @@ Plug 'ervandew/matchem' "auto adds closing quotes, parens, brackets, curlies
 Plug 'kergoth/vim-bitbake', {'for': 'bitbake'} "Syntax highlightinf for bitbake tool(bb,bblasses and inc files)
 Plug 'azadkuh/vim-cmus' "plugin for cmus integration inside vim 
 Plug 'zivyangll/git-blame.vim' "shows git blame information in the status bar for the currently selected line (default binding is <Leader>s)
+Plug 'google/vim-searchindex' "shows how many times does a search pattern occur in the current buffer
+Plug 'romainl/vim-cool' "disables search highlighting when you are done searching and re-enables it when you search again
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -108,6 +110,9 @@ set splitbelow
 "update time set to 100 (default 4000 = 4 sec) for gitguter to by more snappy 
 set updatetime=100
 
+"set highlight all search pattern matches
+set hlsearch
+
 "A file that matches with one of these patterns is ignored when expanding wildcards, completing file or directory names
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class
 
@@ -128,6 +133,9 @@ if !exists('##TextYankPost')
 
 "highlight after yank set to 200 milliseconds
 let g:highlightedyank_highlight_duration = 200
+
+"disable auto save in insert mode
+let g:auto_save_in_insert_mode = 0  
 
 "fuzzy search of files in workspace in normal and insert mode
 nnoremap <C-p> :FZF<Enter> 
