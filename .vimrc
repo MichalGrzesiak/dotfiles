@@ -13,7 +13,7 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
-Plug 'lvht/tagbar-markdown' "php have to be in the $PATH
+Plug 'lvht/tagbar-markdown', {'for': 'markdown'} "php have to be in the $PATH
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale' "linting engine - works for many languages and it's based on third-party linting tools like clang, clang-format or autopep8
@@ -27,7 +27,7 @@ Plug 'tomasiser/vim-code-dark' "
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 Plug 'rhysd/vim-clang-format' " requires to have clang-format installed and have .clang-format file defined
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs' "no longer actively maintained
@@ -42,9 +42,12 @@ Plug 'azadkuh/vim-cmus' "plugin for cmus integration inside vim
 Plug 'zivyangll/git-blame.vim' "shows git blame information in the status bar for the currently selected line (default binding is <Leader>s)
 Plug 'google/vim-searchindex' "shows how many times does a search pattern occur in the current buffer
 Plug 'romainl/vim-cool' "disables search highlighting when you are done searching and re-enables it when you search again
+Plug 'yuttie/comfortable-motion.vim' "provides smooth scrolling 
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'vim-scripts/vim-auto-save'
+Plug 'skywind3000/asyncrun.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
-
 
 "Create YCM config file if there isn't one yet and CMakeLists.txt exist
 :function! RunYCMGeneratorForCmakeProject()
@@ -134,8 +137,27 @@ if !exists('##TextYankPost')
 "highlight after yank set to 200 milliseconds
 let g:highlightedyank_highlight_duration = 200
 
-"disable auto save in insert mode
-let g:auto_save_in_insert_mode = 0  
+"prevent the plugin from overwriting default key mappings (C-d, C-u)
+let g:comfortable_motion_no_default_key_mappings = 1
+
+"set space as smooth scroll down like in modern web browsers
+noremap <silent> <Space> :call comfortable_motion#flick(40)<CR>
+
+"set control plus space as scroll up
+noremap <silent> <c-@> :call comfortable_motion#flick(-40)<CR>
+
+"Enable auto save from the start
+let g:auto_save = 1 
+
+"Disable auto save in insert mode
+let g:auto_save_in_insert_mode = 0
+
+" " let g:livepreview_previewer = 'mupdf'
+let g:livepreview_cursorhold_recompile = 0
+" let g:auto_save_no_updatetime = 1 
+
+"Height of quickfix window (output of Asnych commands)
+:let g:asyncrun_open = 8
 
 "fuzzy search of files in workspace in normal and insert mode
 nnoremap <C-p> :FZF<Enter> 
