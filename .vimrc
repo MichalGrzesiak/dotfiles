@@ -37,7 +37,7 @@ Plug 'simeji/winresizer' "ctrl+e for windows resize mode
 Plug 'airblade/vim-gitgutter' "shows which lines have been added, modified, or removed in sign column
 Plug 'wincent/terminus'
 Plug 'ervandew/matchem' "auto adds closing quotes, parens, brackets, curlies 
-Plug 'kergoth/vim-bitbake', {'for': 'bitbake'} "Syntax highlightinf for bitbake tool(bb,bblasses and inc files)
+Plug 'kergoth/vim-bitbake', {'for': 'bitbake'} "Syntax highlighting for bitbake tool(bb,bblasses and inc files)
 Plug 'azadkuh/vim-cmus' "plugin for cmus integration inside vim 
 Plug 'zivyangll/git-blame.vim' "shows git blame information in the status bar for the currently selected line (default binding is <Leader>s)
 Plug 'google/vim-searchindex' "shows how many times does a search pattern occur in the current buffer
@@ -46,6 +46,7 @@ Plug 'yuttie/comfortable-motion.vim' "provides smooth scrolling
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'vim-scripts/vim-auto-save'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'szw/vim-maximizer' "maximizes current window
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -201,6 +202,15 @@ let g:ycm_autoclose_preview_window_after_completion=1
 
 "Go to definition or declaration provided by YCM completer 
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"Maximizing/restoring current window
+map <F3> :MaximizerToggle!<Enter>
+
+"Run 'compile' script
+map <F5> :AsyncStop<Enter>:AsyncRun ./compile<Enter>
+
+"Run 'run' script
+map <F5> :AsyncStop<Enter>:AsyncRun ./run<Enter>
 
 "English spell check
 map <F7> :setlocal spell! spelllang=en_us<CR>
