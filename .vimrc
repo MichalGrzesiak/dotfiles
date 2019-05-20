@@ -47,6 +47,8 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'vim-scripts/vim-auto-save'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'szw/vim-maximizer' "maximizes current window
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'gustafj/vim-ttcn' "TTCN-3 language support
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -64,6 +66,9 @@ autocmd BufEnter *.html set background=dark | colorscheme gruvbox
 " dark papercolor colorscheme for Markdown and TeX
 autocmd BufEnter *.md set background=dark | colorscheme PaperColor
 autocmd BufEnter *.tex set background=dark | colorscheme PaperColor
+
+" palenight colorscheme for TTCN3
+autocmd BufEnter *.ttcn3 set background=dark | colorscheme palenight | hi Normal guibg=NONE ctermbg=NONE
 
 "set '#' as a deafult comment for cmake files
 autocmd FileType cmake setlocal commentstring=#\ %s
