@@ -49,6 +49,8 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'szw/vim-maximizer' "maximizes current window
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'gustafj/vim-ttcn' "TTCN-3 language support
+Plug 'MattesGroeger/vim-bookmarks' " toggling and searching bookmarks
+Plug 'ddrscott/vim-side-search' " requires ag installed
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -93,6 +95,9 @@ set so=7
 
 "no swap files
 set noswapfile
+
+"stop line breaking
+set nowrap
 
 "Enable persistent undo so that undo history persists across vim sessions
 set undofile
