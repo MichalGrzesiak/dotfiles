@@ -210,6 +210,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "Enables auto closing of the preview window after acceptance of offered completion string.
 let g:ycm_autoclose_preview_window_after_completion=1
 
+"Run Ag search
+map <leader>s  :Ag<CR>
+
 "Go to definition or declaration provided by YCM completer 
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
@@ -220,7 +223,7 @@ map <F3> :MaximizerToggle!<Enter>
 map <F5> :AsyncStop<Enter>:AsyncRun ./compile<Enter>
 
 "Run 'run' script
-map <F5> :AsyncStop<Enter>:AsyncRun ./run<Enter>
+map <F6> :AsyncStop<Enter>:AsyncRun ./run<Enter>
 
 "English spell check
 map <F7> :setlocal spell! spelllang=en_us<CR>
