@@ -164,6 +164,9 @@ let g:livepreview_cursorhold_recompile = 0
 nnoremap <C-p> :FZF<Enter> 
 inoremap <C-p> :FZF<Enter> 
 
+"fuzzy search of open windows in normal mode
+nnoremap W :Windows<Enter>
+
 "semicolon as a fuzzy search of vim commands in normal mode
 nnoremap ; :Commands<Enter>
 
