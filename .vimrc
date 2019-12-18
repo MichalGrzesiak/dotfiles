@@ -195,6 +195,9 @@ inoremap <C-c> :Tags<Enter>
 "Backspace as a delete in visualmode
 vnoremap <BS> d
 
+" Ctrl-R as search and replace of selected text in visualmode
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 "Capital J as motion like j but stops at edge only
 map J <Plug>(edgemotion-j)
 
