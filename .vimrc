@@ -59,6 +59,7 @@ autocmd BufEnter *.cpp colorscheme codedark
 autocmd BufEnter *.c colorscheme codedark 
 autocmd BufEnter *.hpp colorscheme codedark 
 autocmd BufEnter *.h colorscheme codedark 
+autocmd BufEnter *.cc colorscheme codedark
 
 " dark gruvbox colorscheme for Python, Java and HTML
 autocmd BufEnter *.py set background=dark | colorscheme gruvbox
@@ -222,11 +223,11 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "Maximizing/restoring current window
 map <F3> :MaximizerToggle!<Enter>
 
-"Run 'compile' script
-map <F5> :AsyncStop<Enter>:AsyncRun ./compile<Enter>
+"Run 'compile.sh' script
+map <F5> :AsyncStop<Enter>:AsyncRun ./compile.sh<Enter>
 
-"Run 'run' script
-map <F6> :AsyncStop<Enter>:AsyncRun ./run<Enter>
+"Run 'run.sh' script
+map <F6> :AsyncStop<Enter>:AsyncRun ./run.sh<Enter>
 
 "English spell check
 map <F7> :setlocal spell! spelllang=en_us<CR>
