@@ -50,6 +50,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'gustafj/vim-ttcn' "TTCN-3 language support
 Plug 'MattesGroeger/vim-bookmarks' " toggling and searching bookmarks
 Plug 'ddrscott/vim-side-search' " requires ag installed
+Plug 'jceb/vim-orgmode'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
