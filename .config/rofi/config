@@ -5,7 +5,7 @@ rofi.modi:                           window,run,ssh,drun
 rofi.width:                          35
 
 ! Number of lines
-rofi.lines:                          15
+rofi.lines:                          7
 
 ! Number of columns
 rofi.columns:                        1
@@ -152,7 +152,7 @@ rofi.click-to-exit:                  true
 rofi.show-match:                     true
 
 ! New style theme file
-rofi.theme:                          
+rofi.theme:  slate                        
 
 ! Color scheme for normal row
 rofi.color-normal:                   
