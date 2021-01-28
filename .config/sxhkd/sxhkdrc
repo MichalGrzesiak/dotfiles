@@ -1,0 +1,10 @@
+super + l
+	~/.scripts/lock_screen.sh
+
+
+super + 0
+	redshift -O 4500
+
+
+super + 9
+	redshift -x

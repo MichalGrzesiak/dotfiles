@@ -161,11 +161,14 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        font pango:DejaVu Sans Mono, FontAwesome 6
 }
 
 #startup
 #exec --no-startup-id compton -b 
 exec --no-startup-id ~/.scripts/wallpaper.sh
+exec --no-startup-id dex ~/.config/autostart/sxhkd.desktop
+exec --no-startup-id dex ~/.config/autostart/dropbox.desktop
 
 #change of wallpaper
 bindsym $mod+t exec ~/.scripts/wallpaper.sh
@@ -218,6 +221,3 @@ bindsym $mod+Shift+m move workspace to output right
 
 #swap workspaces 
 bindsym $mod+Shift+s exec ~/.scripts/i3_swap_workspaces.sh
-
-#lock screen
-bindsym $mod+q exec ~/.scripts/lock_screen.sh &> /dev/null
