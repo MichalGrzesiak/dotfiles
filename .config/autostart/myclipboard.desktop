@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Clipboard Sync
+Exec=autocutsel -fork && autocutsel -selection PRIMARY -fork
+Hidden=false
